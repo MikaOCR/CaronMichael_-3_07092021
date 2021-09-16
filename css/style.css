@@ -384,6 +384,8 @@ header h1 {
 .second-header .btn-back {
   font-size: 2rem;
   margin: 0 0 0 2rem;
+  text-decoration: none;
+  color: black;
 }
 
 .container-title-menu .img-menu {
