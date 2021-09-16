@@ -219,7 +219,7 @@ header {
     h3 {
        @extend %text-menu--typography;
        margin-top: 1.5rem;
-       animation: slide_down 1.6s ease-in-out;
+       animation: slide_down 1.2s ease-in-out;
 
     }
 
@@ -227,12 +227,11 @@ header {
         margin: 0.3rem 0 1rem 0;
         border: 1px solid $Third-color;
         width: 3rem;
-        animation: slide_down 1.6s ease-in-out;
+        animation: slide_down 1.2s ease-in-out;
     }
 
     .btn-food {
         @extend %menu-food;
-        animation: slide_down 1.2s ease-in-out;
         background: linear-gradient(to left, $Third-color 50%, #fff 50%);
         background-size: 200% 100%;
         background-position: left;
@@ -266,6 +265,22 @@ header {
             }
         }
     }
+}
+
+.menu-1 {
+    animation: slide_down 1.2s ease-in-out;
+}
+
+.menu-2 {
+    animation: slide_down 1.4s ease-in-out;
+}
+
+.menu-3 {
+    animation: slide_down 1.6s ease-in-out;
+}
+
+.menu-4 {
+    animation: slide_down 1.8s ease-in-out;
 }
 
 
@@ -310,7 +325,7 @@ header {
     }
 
     90% {
-        opacity: 0.5;
+        opacity: 0.2;
     }
 
     100% {
