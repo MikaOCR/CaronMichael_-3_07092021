@@ -412,13 +412,22 @@ header h1 {
   -webkit-animation: fade_in 2.5s ease-in-out;
           animation: fade_in 2.5s ease-in-out;
 }
-.container-title-menu .title-menu .icon-like {
-  font-size: 2rem;
-  margin-right: 2rem;
-  border: none;
-  background-color: #f6f6f6;
-  -webkit-animation: fade_in 2.5s ease-in-out;
-          animation: fade_in 2.5s ease-in-out;
+.container-title-menu .title-menu .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+}
+.container-title-menu .title-menu .icon-container .icon-like {
+  width: 100%;
+  stroke: black;
+  stroke-width: 2rem;
+  fill-opacity: 0;
+}
+.container-title-menu .title-menu .icon-container .icon-like:hover {
+  cursor: pointer;
+  -webkit-animation: color 1s ease forwards;
+          animation: color 1s ease forwards;
 }
 
 @-webkit-keyframes fade_in {
