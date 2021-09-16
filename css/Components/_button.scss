@@ -180,6 +180,6 @@
     background-image: linear-gradient(to top, #9356DC,#FF79DA);
 
     &:hover {
-        opacity: 0.8;
+        animation: scale 1s ease-in-out forwards;
     }
 }

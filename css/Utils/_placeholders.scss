@@ -53,17 +53,31 @@
 
     h4 {
         font-size: 1.4rem;
+        padding-bottom: 0.5rem;
     }
 
-    .description {
+    .description-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 1rem 0 1rem 0;
+        padding: 0 0 0.5rem 0;
         font-size: 1.2rem;
+        width: 100%;
+
+        .description-text {
+            flex: 4;
+        }
 
         .price {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
             font-weight: bold;
+            flex: 1;
+        }
+
+        .check-icon {
+            display: none;
         }
     }
 }
