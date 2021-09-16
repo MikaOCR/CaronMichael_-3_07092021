@@ -99,7 +99,19 @@ header {
 
     .fonction-btn {
         @extend %btn-fonction;
+        transition: all 1s;
+
+        &:hover {
+
+            background: $Primary-color-transparent;
+
+            .icon-fonction {
+                color: $Primary-color;
+            }
+        }
     }
+
+
 }
 
 .bloc3 {
@@ -121,6 +133,10 @@ header {
 
 .carte-restaurant {
     @extend %carte-restaurant;
+}
+
+.description-carte {
+    @extend %description-style;
 }
 
 /* PAGE 1 */
