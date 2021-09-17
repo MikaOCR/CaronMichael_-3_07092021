@@ -10,23 +10,19 @@
     background-image: linear-gradient(to top, #9356DC,#FF79DA);
 
     &:hover {
-        animation: scale 1s ease-in-out forwards;
+        animation: bright 0.4s ease-in-out forwards;
     }
 }
 
-@keyframes scale {
+@keyframes bright {
 
     0% {
-        opacity: 0.5;
-    }
-
-    50% {
-        transform: scale(0.9);
+        filter: brightness(1);
     }
 
     100% {
-        transform: scale(1);
-        opacity: 1;
+        filter: brightness(1.2);
+        box-shadow: 1px 1px 15px -2px #383838;
     }
 }
 
@@ -136,7 +132,7 @@
             width: 100%;
             stroke: rgb(0, 0, 0);
             stroke-width: 2rem;
-            fill-opacity: 0;
+            fill: #fff;
 
             &:hover {
                 cursor: pointer;
@@ -148,22 +144,21 @@
 
 @keyframes color {
     0% {
-        stroke: black;
-        stroke-opacity: 50%;
+        stroke: url(#icon-fill);
+        fill: url(#icon-fill);
+        fill-opacity: 0;
         transform: scale(1);
     }
 
     50% {
-        stroke: rgb(255, 255, 255);
-        transform: scale(2);
-        fill: none;
+        transform: scale(1.2);
     }
 
     100% {
         stroke: url(#icon-fill);
-        transform: scale(1);
         fill: url(#icon-fill);
         fill-opacity: 100%;
+        transform: scale(1);
     }
 }
 
@@ -180,6 +175,6 @@
     background-image: linear-gradient(to top, #9356DC,#FF79DA);
 
     &:hover {
-        animation: scale 1s ease-in-out forwards;
+        animation: bright 0.4s ease-in-out forwards;
     }
 }
