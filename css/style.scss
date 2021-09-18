@@ -33,6 +33,68 @@ header {
     }
 }
 
+.loader-box {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(253, 253, 253);
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    @extend %text-typography;
+    font-size: 8rem;
+    color: $Primary-color;
+    text-align: center;
+    animation: loader 1s ease-in infinite;
+}
+
+
+@keyframes loader {
+    
+    0% {
+        color: $Primary-color;
+        transform: translateY(0rem);
+    }
+
+    50% {
+        color: $Secondary-color;
+        transform: translateY(2rem);
+    }
+
+    100% {
+        color: $Third-color;
+        transform: translateY(0rem);
+    }
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+
+
+
 .gps-bloc {
     display: flex;
     align-items: center;
