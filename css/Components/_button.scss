@@ -84,7 +84,12 @@
         object-fit: cover;
     }
 
+    .new-bloc {
+        display: none;
+    }
+
     .new-on {
+        display: none;
         width: 7rem;
         padding: 0.5rem;
         margin: 1rem 0 0.5rem 0;
@@ -92,8 +97,6 @@
         @extend %text-typography;
         font-size: 1.1rem;
         font-weight: bold;
-        position: absolute;
-        left: 27.5rem;
         color: #039671;
 
     }
@@ -157,7 +160,7 @@
     100% {
         stroke: url(#icon-fill);
         fill: url(#icon-fill);
-        fill-opacity: 100%;
+        fill-opacity: 1;
         transform: scale(1);
     }
 }

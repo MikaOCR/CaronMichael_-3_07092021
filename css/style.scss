@@ -2,6 +2,7 @@
 @import '../css/Utils/mixins';
 @import '../css/Utils/placeholders';
 @import '../css/Components/button';
+@import '../css/Utils/keyframes';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
@@ -61,25 +62,6 @@ header {
     animation: loader 1s ease-in infinite;
 }
 
-
-@keyframes loader {
-    
-    0% {
-        color: $Primary-color;
-        transform: translateY(0rem);
-    }
-
-    50% {
-        color: $Secondary-color;
-        transform: translateY(2rem);
-    }
-
-    100% {
-        color: $Third-color;
-        transform: translateY(0rem);
-    }
-}
-
 .dot:nth-child(1) {
     animation-delay: 0.1s;
 }
@@ -91,9 +73,6 @@ header {
 .dot:nth-child(3) {
     animation-delay: 0.3s;
 }
-
-
-
 
 .gps-bloc {
     display: flex;
@@ -269,23 +248,6 @@ header {
     }
 }
 
-@keyframes fade_in {
-
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-
 .bloc-menu1 {
     @extend %bloc-menu--style;
     text-align: start;
@@ -358,60 +320,11 @@ header {
     animation: slide_down 1.8s ease-in-out;
 }
 
-
-@keyframes slide-right {
-    
-    0% {
-        transform: translateX(40px)
-    }
-
-    90% {
-        transform: translateX(-10px)
-    }
-
-    100% {
-        transform: translateX(0)
-    }
-}
-
-@keyframes rotation {
-    
-    0% {
-        transform: rotate(-360deg)
-    }
-
-    100% {
-        transform: rotate(0)
-    }
-}
-
 .commander {
     @extend %button-commander;
     margin: 4rem 0 0 6.5rem;
     animation: slide_down 1s ease-in-out;
 }
-
-
-@keyframes slide_down {
-
-    0% {
-        transform: translateY(-150px);
-        opacity: 0;
-    }
-
-    90% {
-        opacity: 0.2;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-
-
 
 footer {
     display: flex;
@@ -453,4 +366,19 @@ footer {
 
 .link1, .link2, .link3, .link4 {
     margin-bottom: 1rem;
+}
+
+@media (min-width: $bp-tablet) {
+    
+    .gps-bloc {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .bloc1 {
+        height: auto;
+        padding-bottom: 5rem;
+    }
+
+
 }
