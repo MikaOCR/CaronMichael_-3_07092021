@@ -94,25 +94,6 @@ footer .link2, footer .link1, footer a {
           animation: bright 0.4s ease-in-out forwards;
 }
 
-@-webkit-keyframes bright {
-  0% {
-    filter: brightness(1);
-  }
-  100% {
-    filter: brightness(1.2);
-    box-shadow: 1px 1px 15px -2px #383838;
-  }
-}
-
-@keyframes bright {
-  0% {
-    filter: brightness(1);
-  }
-  100% {
-    filter: brightness(1.2);
-    box-shadow: 1px 1px 15px -2px #383838;
-  }
-}
 .button-fonction-bloc .fonction-btn {
   display: flex;
   align-items: center;
@@ -202,11 +183,11 @@ footer .link2, footer .link1, footer a {
 .description-carte .icon-container {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 .description-carte .icon-container .icon-like {
-  width: 100%;
+  width: 5rem;
   stroke: black;
   stroke-width: 2rem;
   fill: #fff;
@@ -217,41 +198,6 @@ footer .link2, footer .link1, footer a {
           animation: color 1s ease forwards;
 }
 
-@-webkit-keyframes color {
-  0% {
-    stroke: url(#icon-fill);
-    fill: url(#icon-fill);
-    fill-opacity: 0;
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    stroke: url(#icon-fill);
-    fill: url(#icon-fill);
-    fill-opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes color {
-  0% {
-    stroke: url(#icon-fill);
-    fill: url(#icon-fill);
-    fill-opacity: 0;
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    stroke: url(#icon-fill);
-    fill: url(#icon-fill);
-    fill-opacity: 1;
-    transform: scale(1);
-  }
-}
 .commander {
   width: 18rem;
   height: 5rem;
@@ -357,7 +303,7 @@ footer .link2, footer .link1, footer a {
     transform: scale(1);
   }
 }
-@-webkit-keyframes loader {
+@-webkit-keyframes loader-dot {
   0% {
     color: #9356DC;
     transform: translateY(0rem);
@@ -371,7 +317,7 @@ footer .link2, footer .link1, footer a {
     transform: translateY(0rem);
   }
 }
-@keyframes loader {
+@keyframes loader-dot {
   0% {
     color: #9356DC;
     transform: translateY(0rem);
@@ -383,6 +329,86 @@ footer .link2, footer .link1, footer a {
   100% {
     color: #99E2D0;
     transform: translateY(0rem);
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+  50% {
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+  50% {
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@-webkit-keyframes color {
+  0% {
+    stroke: url(#icon-fill);
+    fill: url(#icon-fill);
+    fill-opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    stroke: url(#icon-fill);
+    fill: url(#icon-fill);
+    fill-opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes color {
+  0% {
+    stroke: url(#icon-fill);
+    fill: url(#icon-fill);
+    fill-opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    stroke: url(#icon-fill);
+    fill: url(#icon-fill);
+    fill-opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes bright {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.2);
+    box-shadow: 1px 1px 15px -2px #383838;
+  }
+}
+@keyframes bright {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.2);
+    box-shadow: 1px 1px 15px -2px #383838;
   }
 }
 /* GENERAL */
@@ -418,7 +444,8 @@ header h1 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  -webkit-animation: fadeOut 4s ease forwards;
+          animation: fadeOut 4s ease forwards;
 }
 
 .loader {
@@ -431,8 +458,8 @@ header h1 {
   font-size: 8rem;
   color: #9356DC;
   text-align: center;
-  -webkit-animation: loader 1s ease-in infinite;
-          animation: loader 1s ease-in infinite;
+  -webkit-animation: loader-dot 1s ease-in-out infinite;
+          animation: loader-dot 1s ease-in-out infinite;
 }
 
 .dot:nth-child(1) {
@@ -506,6 +533,7 @@ header h1 {
   transition: all 1s;
 }
 .button-fonction-bloc .fonction-btn:hover {
+  cursor: pointer;
   background: rgba(147, 86, 220, 0.2);
 }
 .button-fonction-bloc .fonction-btn:hover .icon-fonction {
@@ -525,6 +553,12 @@ header h1 {
   text-align: start;
   font-weight: bold;
   font-size: 2.2rem;
+}
+.bloc3 .carte-restaurant-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* PAGE 1 */
@@ -687,6 +721,7 @@ footer .link2 .hands-icon {
   margin-bottom: 1rem;
 }
 
+/* MEDIA QUERIES */
 @media (min-width: 768px) {
   .gps-bloc {
     padding: 0;
@@ -696,5 +731,80 @@ footer .link2 .hands-icon {
   .bloc1 {
     height: auto;
     padding-bottom: 5rem;
+  }
+
+  .bloc2 {
+    align-items: center;
+  }
+  .bloc2 .button-fonction-bloc {
+    width: 80%;
+    align-items: center;
+  }
+
+  .bloc3 {
+    align-items: center;
+  }
+  .bloc3 .carte-restaurant {
+    width: 80%;
+  }
+
+  .link-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 3rem;
+    margin: 2rem 0 2rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  .bloc2 {
+    align-items: flex-start;
+  }
+  .bloc2 h2 {
+    margin-top: 2.5rem;
+  }
+  .bloc2 .button-fonction-bloc {
+    width: 100%;
+    flex-direction: row;
+  }
+  .bloc2 .button-fonction-bloc .fonction-btn {
+    margin: 1rem;
+  }
+
+  .bloc3 {
+    align-items: flex-start;
+  }
+  .bloc3 .carte-restaurant-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .bloc3 .carte-restaurant-container .carte-restaurant {
+    width: 45%;
+    margin: 1rem;
+  }
+}
+@media (min-width: 1903px) {
+  .button-fonction-bloc {
+    justify-content: space-around;
+  }
+  .button-fonction-bloc .fonction-btn {
+    width: 25%;
+  }
+
+  .bloc3 .carte-restaurant-container {
+    justify-content: space-around;
+  }
+  .bloc3 .carte-restaurant-container .carte-restaurant {
+    width: 20%;
+  }
+
+  footer {
+    height: auto;
+  }
+  footer h2 {
+    font-size: 2.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

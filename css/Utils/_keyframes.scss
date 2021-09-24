@@ -57,7 +57,7 @@
     }
 }
 
-@keyframes loader {
+@keyframes loader-dot {
     
     0% {
         color: $Primary-color;
@@ -72,5 +72,54 @@
     100% {
         color: $Third-color;
         transform: translateY(0rem);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    50% {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    } 
+ } 
+
+@keyframes color {
+    0% {
+        stroke: url(#icon-fill);
+        fill: url(#icon-fill);
+        fill-opacity: 0;
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        stroke: url(#icon-fill);
+        fill: url(#icon-fill);
+        fill-opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bright {
+
+    0% {
+        filter: brightness(1);
+    }
+
+    100% {
+        filter: brightness(1.2);
+        box-shadow: 1px 1px 15px -2px #383838;
     }
 }
