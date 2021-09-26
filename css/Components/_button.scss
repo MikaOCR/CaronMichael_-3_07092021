@@ -10,7 +10,8 @@
     background-image: linear-gradient(to top, #9356DC,#FF79DA);
 
     &:hover {
-        animation: bright 0.4s ease-in-out forwards;
+        filter: brightness(1.2);
+        box-shadow: 1px 1px 15px -2px #383838;
     }
 }
 
@@ -121,9 +122,9 @@
 
         .icon-like {
             width: 5rem;
-            stroke: rgb(0, 0, 0);
-            stroke-width: 2rem;
+            stroke: black;
             fill: #fff;
+            stroke-width: 20;
 
             &:hover {
                 cursor: pointer;
@@ -146,6 +147,7 @@
     background-image: linear-gradient(to top, #9356DC,#FF79DA);
 
     &:hover {
-        animation: bright 0.4s ease-in-out forwards;
+        filter: brightness(1.2);
+        box-shadow: 1px 1px 15px -2px #383838;
     }
 }

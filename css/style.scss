@@ -327,10 +327,14 @@ header {
     animation: slide_down 1.8s ease-in-out;
 }
 
+.btn-commander-container {
+    display: flex;
+    justify-content: center;
+}
+
 .commander {
     @extend %button-commander;
-    margin: 4rem 0 0 6.5rem;
-    animation: slide_down 1s ease-in-out;
+    margin: 4rem 0 0 0;
 }
 
 footer {
@@ -456,7 +460,6 @@ footer {
 @media (min-width: $bp-desktop) {
 
     .button-fonction-bloc {
-
         justify-content: space-around;
 
         .fonction-btn {
@@ -465,19 +468,57 @@ footer {
     }
 
     .bloc3 {
-
         .carte-restaurant-container {
-
             justify-content: space-around;
-    
+
             .carte-restaurant {
                 width: 20%;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
             }
         }
     }
 
-    footer {
+    .container-title-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
 
+        .title-menu {
+            width: 58%;
+        }
+    }
+
+    .bloc-menu1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding-bottom: 0;
+
+        .btn-food-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60%;
+            background-color: $background-bloc;
+            padding-bottom: 2rem;
+
+        }
+
+        .btn-food {
+            width: 50%;
+        }
+
+        .commander {
+            margin-left: 0;
+        }
+    }
+
+    footer {
         height: auto;
 
         h2 {
