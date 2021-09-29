@@ -65,6 +65,7 @@
     padding: 0 0 0.5rem 0;
     margin-bottom: 2rem;
     cursor: pointer;
+    position: relative;
 
     .img-resto {
         width: 100%;
@@ -74,11 +75,13 @@
     }
 
     .new-bloc {
-        display: none;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 75%;
     }
 
     .new-on {
-        display: none;
         width: 7rem;
         padding: 0.5rem;
         margin: 1rem 0 0.5rem 0;
